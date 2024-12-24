@@ -1,0 +1,3467 @@
+/* GLOBALS */
+:root {
+    --inc_color1: #F4B845;
+    --inc_color2: #DAA520;
+    --brown_text: #312205;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+header {
+    z-index: 100;
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.body {
+    margin: 0;
+    padding: 0;
+}
+
+.row {
+    width: 100%;
+    margin: 0px;
+}
+
+.col {
+    padding: 0;
+}
+
+.gradient-text {
+    background: linear-gradient(90deg, #EBA114, #A67923);
+    /* Adjust colors as needed */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+
+
+
+
+
+
+/* width */
+::-webkit-scrollbar {
+    width: 8px;
+    padding: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px rgba(128, 128, 128, 0);
+    border-radius: 10px;
+}
+
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--inc_color2);
+    border-radius: 10px;
+}
+
+
+
+
+
+
+
+
+
+/* animations */
+.animate {
+    opacity: 0;
+    transition: opacity 1s, transform 1s;
+}
+
+.fadeLeft.animate {
+    transform: translateX(-60px);
+}
+
+.fadeRight.animate {
+    transform: translateX(60px);
+}
+
+.fadeInUp.animate {
+    transform: translateY(60px);
+}
+
+.fadeInDown.animate {
+    transform: translateY(-60px);
+}
+
+.animate.fade-in {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+/* animations */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* HAMBURGER MENU FOR MOBILE */
+.hamburger {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 0;
+    right: 0;
+    display: none;
+}
+
+.hamburger_button {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    outline: none;
+}
+
+.hamburger_button i {
+    font-size: 200%;
+}
+
+.hamburger_mobile_menu {
+    width: 100%;
+    height: max-content;
+    background-image: url(../img/Rectangle\ 409.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    padding: 2%;
+    display: none;
+    position: absolute;
+    z-index: 10;
+    border-radius: 0.8rem;
+}
+
+.hamburger_mobile_menu a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 150%;
+    font-weight: 500;
+}
+
+.mobile_services_dropdown_container {
+    display: none;
+    padding-left: 10px;
+    /* Indent dropdown items */
+}
+
+.mobile_services_dropdown_container a {
+    font-size: 130%;
+    font-weight: 400;
+}
+
+@media (max-width: 920px) {
+    .hamburger {
+        display: block;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* *****************************                       HOME PAGE CSS           ****************************/
+
+
+/* HERO SECTION */
+.hero {
+    width: 100%;
+    height: max-content;
+
+}
+
+.header {
+    position: relative;
+}
+
+
+
+/* logo section */
+.nav_logo_col {}
+
+.nav_logo_col img {
+    width: 60%;
+    height: auto;
+    padding: 20px;
+    margin-left: 10px;
+}
+
+
+
+/* navigation bar */
+.services_dropdown_container {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    width: 100%;
+    top: 100%;
+    left: 0;
+    transition: opacity 1s ease, visibility 1s ease;
+    
+}
+
+/* Show the services dropdown on hover */
+.nav_services:hover .services_dropdown_container {
+    opacity: 1;
+    visibility: visible;
+    display: block;
+}
+
+
+.nav_navbar_col {
+    padding: 0;
+}
+
+.navbar_container {
+    width: 100%;
+    height: 80%;
+    border-radius: 2rem;
+    margin-top: 20px;
+    padding: 10px;
+
+    background-image: url(../img/Rectangle\ 409.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 5px 6px 20px 0px #000000;
+}
+
+.nav_main_menu_wrap {
+    width: 100%;
+    height: max-content;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nav_item {
+    padding: 3% 4%;
+    height: max-content;
+    width: max-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1rem;
+    color: #fff;
+    font-weight: 500;
+}
+
+.nav_item a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.nav_active {
+    background-image: url(../img/Rectangle\ 430.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    color: #000 !important;
+}
+
+.nav_active a {
+    text-decoration: none;
+    color: #000 !important;
+}
+
+.services_dropdown {
+    width: 60%;
+    float: right;
+    border-radius: 1rem;
+    padding: 2%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    background-image: url(../img/Rectangle\ 409.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.services_dropdown_items_box {
+    width: max-content;
+    display: flex;
+    flex-direction: column;
+}
+
+.services_dropdown_items_box a {
+    margin-bottom: 3%;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 300;
+    font-size: 90%;
+}
+
+
+
+
+.header_contact_button {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.header_contact_button button {
+    float: right;
+    margin-right: 2%;
+    background-color: #ffffff;
+    color: #000;
+    padding: 2% 5% 2% 5%;
+    border: 4px solid var(--inc_color2);
+    border-radius: 2rem;
+    outline: none;
+}
+
+
+
+
+
+
+/* social media icons */
+.nav_social_col {
+    position: relative;
+}
+
+.nav_social_container {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-image: url(../img/Rectangle\ 409.webp);
+    background-size: cover;
+    /* Ensures the image covers the entire div */
+    background-position: center;
+    /* Centers the image */
+    background-repeat: no-repeat;
+    /* Prevents the image from repeating */
+    overflow: hidden;
+
+    width: max-content;
+    height: 120px;
+    margin-top: 20px;
+    padding: 2%;
+    font-size: 150%;
+    color: #fff;
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+}
+
+.nav_social_container a {
+    color: #fff;
+}
+
+@media (max-width: 920px) {
+    .nav_navbar_col {
+        display: none;
+    }
+
+    .nav_social_col {
+        display: none;
+    }
+
+    .header_contact_button {
+        display: none;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+/* HERO SECTION CONTENT*/
+.hero-content {
+    text-align: center;
+    z-index: 1;
+}
+
+.hero_content_wrap {
+    width: 50%;
+    padding-top: 25vh;
+    padding-left: 15vh;
+    text-align: left;
+    line-height: 150%;
+}
+
+.hero-content h2 {
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: var(--brown_text);
+    line-height: 150%;
+}
+
+.hero-content h1 {
+    padding: 0;
+    font-size: 180%;
+    color: #000;
+}
+
+.hero-content p {
+    font-size: 4rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: var(--brown_text);
+    line-height: 150%;
+    padding: 0;
+
+}
+
+.hero-content .quote-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: var(--inc_color1);
+    border: none;
+    border-radius: 0.8rem;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10vh;
+    box-shadow: 4px 10px 15px 0px #a7a7a7;
+    ;
+
+}
+
+.hero-content .quote-button:hover {
+    background-color: #d39b2c;
+}
+
+.container-image {
+    width: 50%;
+    position: absolute;
+    top: -100vh;
+    /* Start above the viewport */
+    right: 30px;
+    animation: drop 2s forwards, swing 2s 1s infinite alternate ease-in-out;
+    z-index: -1;
+}
+
+.container-image img {
+    width: 100%;
+    /* Adjust size as needed */
+    display: block;
+    margin: 0 auto;
+}
+
+@keyframes drop {
+    to {
+        top: -10vh;
+        /* Adjust based on the desired final position */
+    }
+}
+
+@keyframes swing {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(4deg);
+    }
+}
+
+
+@media (max-width: 1500px) {
+    .hero_content_wrap {
+        padding-top: 15vh;
+        padding-left: 10vh;
+    }
+
+    .hero-content h2 {
+        font-size: 3rem;
+    }
+
+    .hero-content p {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 1100px) {
+    .hero_content_wrap {
+        padding-top: 10vh;
+        padding-left: 5vh;
+    }
+
+    .hero-content h2 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 2rem;
+    }
+
+    .hero-content .quote-button {
+        margin-top: 5vh;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav_logo_col img {
+        width: 60%;
+        height: auto;
+        padding: 5px;
+        margin-left: 10px;
+    }
+
+    .hero_content_wrap {
+        background-color: #ffffff04;
+        width: 100%;
+        padding-top: 25vh;
+        padding-left: 5vh;
+    }
+
+    .hero-content h2 {
+        font-size: 3rem;
+    }
+
+    .hero-content p {
+        font-size: 3rem;
+    }
+
+    .container-image {
+        width: 100%;
+
+    }
+
+    .container-image img {
+        width: 80%;
+        float: right;
+        /* Adjust size as needed */
+        display: block;
+        margin: 0 auto;
+        padding: 0;
+
+    }
+
+    .hero-content .quote-button {
+        margin-top: 5vh;
+    }
+}
+
+@media (max-width: 520px) {
+    .hero-content h2 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 2rem;
+    }
+
+    .container-image {
+        width: 110%;
+    }
+
+    .hero-content .quote-button {
+        margin-top: 2vh;
+    }
+}
+
+@media (max-width: 350px) {
+    .hero-content h2 {
+        font-size: 1.5rem;
+    }
+
+    .hero-content p {
+        font-size: 1.5rem;
+    }
+
+    .container-image {
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ABOUT SECTION */
+.home_about {
+    width: 100%;
+    height: max-content;
+}
+
+.about_banner_wrap {
+    width: 90%;
+    height: max-content;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 5%;
+    background-color: var(--inc_color1);
+    border-radius: 5rem;
+    box-shadow: 4px 10px 15px 0px #a7a7a7;
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-bottom: 2%;
+}
+
+.about_banner {
+    padding: 5%;
+    background-image: url(../img/Rectangle\ 409.webp);
+    background-size: cover;
+    /* Ensures the image covers the entire div */
+    background-position: center;
+    /* Centers the image */
+    background-repeat: no-repeat;
+    /* Prevents the image from repeating */
+    overflow: hidden;
+    box-shadow: 4px 10px 15px 0px #000000;
+    border-radius: 5rem;
+}
+
+.about_banner h2 {
+    font-weight: 700;
+    color: #000;
+}
+
+.about_banner h3 {
+    font-weight: 600;
+    color: #000;
+}
+
+.about_banner p {
+    font-weight: 500;
+    color: #000;
+    padding: 0;
+}
+
+@media (max-width: 768px) {
+    .about_banner {
+        padding: 10%;
+    }
+}
+
+.about_sticker {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: max-content;
+}
+
+.about_sticker_img_container {
+    width: max-content;
+    height: max-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about_sticker img {
+    width: 30%;
+}
+
+.about_sticker_img_container:hover img {
+    animation: flip 2s;
+}
+
+@keyframes flip {
+    0% {
+        transform: rotateY(0deg);
+    }
+
+    50% {
+        transform: rotateY(180deg);
+    }
+
+    100% {
+        transform: rotateY(360deg);
+    }
+}
+
+.about_sticker_text {
+    padding-top: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: max-content;
+}
+
+.about_sticker_text_item {
+    width: 20%;
+    text-align: center;
+}
+
+.about_sticker_text_item h4 {
+    font-weight: bold;
+    color: #000;
+}
+
+.about_sticker_text_item p {
+    color: #000;
+    padding-left: 15%;
+    padding-right: 15%;
+}
+
+.about_bottom_banner {
+    width: 100%;
+    height: max-content;
+}
+
+.about_bottom_banner img {
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .about_sticker {
+        display: none;
+    }
+
+    .about_sticker_text {
+        padding-top: 50px;
+    }
+}
+
+
+
+
+
+
+
+
+/* ACHIVEMENTS SECTION */
+.home_achivements {
+    width: 100%;
+    height: 400px;
+    position: relative;
+
+    background-image: url(../img/rectangle403.webp);
+    background-size: cover;
+    /* Ensures the image covers the entire div */
+    background-position: center;
+    /* Centers the image */
+    background-repeat: no-repeat;
+    /* Prevents the image from repeating */
+    overflow: hidden;
+}
+
+.achivements_wrapper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #c9c8c84b;
+    display: none;
+}
+
+.achivements_content {
+    width: 100%;
+    position: absolute;
+    right: 0px;
+    top: 30px;
+    text-align: center;
+}
+
+.achivements_content_counter {
+    padding-top: 7%;
+}
+
+.achivements_content h2 {
+    color: #ffffff;
+    font-size: 300%;
+    font-weight: 700;
+}
+
+.achivements_content p {
+    color: #ffffff;
+    font-size: 100%;
+    font-weight: 500;
+}
+
+
+@media (max-width: 576px) {
+    .home_achivements {
+        height: 650px;
+    }
+}
+
+
+
+
+
+
+/* VIDEO SECTION */
+.home_video {
+    position: relative;
+    padding-bottom: 56.25%;
+    /* 16:9 */
+    height: 0;
+    margin: 2%;
+}
+
+.home_video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 3rem;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+/* SERVICES SECTION */
+.home_services {
+    background-image: url(../img/home_services_backgound_image.webp);
+    background-size: cover;
+    /* Ensures the image covers the entire div */
+    background-position: center;
+    /* Centers the image */
+    background-repeat: no-repeat;
+    /* Prevents the image from repeating */
+    overflow: hidden;
+
+    width: 100%;
+    height: max-content;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.home_services_heading {
+    width: 100%;
+    height: max-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 3%;
+    padding-bottom: 0%;
+    font-size: 300%;
+    font-weight: 700;
+    color: #000;
+}
+
+.home_services_icons {
+    width: 100%;
+    height: max-content;
+    padding: 4%;
+}
+
+.home_services_item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    font-weight: 600;
+    margin-bottom: 2%;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    transition: 0.7s ease;
+}
+
+.dot {
+    width: 10px;
+    aspect-ratio: 1;
+    position: absolute;
+    background-color: var(--inc_color1);
+    border-radius: 100px;
+    z-index: 2;
+    right: 10%;
+    top: 10%;
+    animation: moveDot 6s linear infinite;
+}
+
+@keyframes moveDot {
+
+    0%,
+    100% {
+        top: 10%;
+        right: 10%;
+    }
+
+    25% {
+        top: 10%;
+        right: calc(100% - 35px);
+    }
+
+    50% {
+        top: calc(100% - 30px);
+        right: calc(100% - 35px);
+    }
+
+    75% {
+        top: calc(100% - 30px);
+        right: 10%;
+    }
+}
+
+
+.home_services_item:hover {
+    box-shadow: 0px 0px 20px 0px black;
+    border-radius: 20px;
+    cursor: pointer;
+    background-color: #ffcb482f;
+}
+
+.home_services_item img {
+    margin-right: 3%;
+}
+
+.home_services button {
+    background-image: url(../img/Rectangle\ 409.webp);
+    background-size: cover;
+    /* Ensures the image covers the entire div */
+    background-position: center;
+    /* Centers the image */
+    background-repeat: no-repeat;
+    /* Prevents the image from repeating */
+    overflow: hidden;
+
+    box-shadow: 4px 10px 15px 0px #a7a7a7;
+    padding: 1% 4%;
+    margin-bottom: 2%;
+    border-radius: 1rem;
+
+    font-size: 130%;
+    font-weight: 600;
+    border: none;
+    outline: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* VIDEO SECTION */
+.home_video {
+    position: relative;
+    padding-bottom: 56.25%;
+    /* 16:9 */
+    height: 0;
+    margin: 0%;
+}
+
+.home_video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    border-radius: 3rem;
+
+}
+
+
+
+
+
+
+
+
+
+
+/* CONTACT SECTION */
+.home_contact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.home_contact_head {
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.home_contact_head h2 {
+    margin-left: 5%;
+    font-size: 300%;
+}
+
+.home_contact_image {
+    width: 100%;
+    height: max-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home_contact_image img {
+    width: 70%;
+    margin-top: 15%;
+    margin-bottom: 10%;
+}
+
+.home_contact_col2 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+}
+
+.home_contact_form_container {
+    width: 90%;
+    border-radius: 1.5rem;
+    box-shadow: -20px 18px 11px 2px #7d7d7d;
+}
+
+.contact_form {
+    width: 100%;
+    height: 100%;
+    background-color: #1A1A1A;
+    border-radius: 1.5rem;
+    padding: 8% 3%;
+    border: 5px solid var(--inc_color1);
+    clip-path: polygon(100% 25%, 100% 100%, 0% 100%, 0% 0%, 75% 0%);
+
+}
+
+.contact_form h2 {
+    color: #ffffff;
+    font-weight: 700;
+    text-shadow: 2px 2px 0px #A67923;
+    margin-top: 6%;
+    margin-bottom: 8%;
+}
+
+.contact_form p {
+    color: #7A7A7A;
+    margin-bottom: 8%;
+}
+
+
+
+.cfif {
+    width: 100%;
+    height: max-content;
+    display: flex;
+}
+
+.cfif input {
+    width: 100%;
+    padding: 2%;
+    margin: 0.5%;
+    border: none;
+    outline: none;
+}
+
+.contact_form textarea {
+    width: 99%;
+    border: none;
+    outline: none;
+    margin: 0.5%;
+    padding: 2%;
+
+}
+
+.contact_form button {
+    width: 100%;
+    padding: 1%;
+    border-radius: 2rem;
+    background-color: var(--inc_color1);
+    border: none;
+    outline: none;
+    font-weight: 700;
+}
+
+
+.contact_details_bar {
+    width: 100%;
+    height: max-content;
+}
+
+.contact_details_polygon {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    clip-path: polygon(85% 0%, 100% 100%, 0% 100%, 0% 0%);
+    background-color: var(--inc_color2);
+    display: flex;
+    align-items: end;
+    justify-content: flex-start;
+}
+
+.contact_details_polygon_b {
+    width: 99.6%;
+    height: 98%;
+    clip-path: polygon(85% 0%, 100% 100%, 0% 100%, 0% 0%);
+    background-color: #ffffff;
+}
+
+.contact_detail_row {
+    width: 90%;
+    height: 100%;
+    padding-top: 6%;
+    padding-bottom: 3%;
+    padding-left: 2%;
+}
+
+.contact_detail {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.contact_detail i {
+    font-size: 300%;
+    padding: 6%;
+}
+
+.contact_detail h4 {
+    color: var(--inc_color2);
+    font-size: 150%;
+}
+
+.contact_detail a {
+    text-decoration: none;
+    color: #000;
+    font-size: 80%;
+}
+
+.contact_detail_content {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact_dubai_logos {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.contact_dubai_logos img {
+    width: 30%;
+}
+
+
+
+
+
+@media (max-width: 768px) {
+    .home_contact_head h2 {
+        font-size: 150%;
+    }
+
+    .contact_details_polygon_b {
+        width: 100%;
+        height: 98%;
+        clip-path: polygon(100% 0%, 100% 100%, 0% 100%, 0% 0%);
+    }
+
+    .home_contact_col1 {
+        display: none;
+    }
+}
+
+@media (max-width: 576px) {
+    .home_services_item img {
+        width: 40%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* FOOTER SECTION */
+
+footer {
+    width: 100%;
+    height: max-content;
+
+    background-image: url(../img/Rectangle\ 360.webp);
+    background-size: cover;
+    /* Ensures the image covers the entire div */
+    background-position: center;
+    /* Centers the image */
+    background-repeat: no-repeat;
+    /* Prevents the image from repeating */
+    overflow: hidden;
+}
+
+.footer_logo_container {
+    width: 100%;
+    padding: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.footer_logo_container img {
+    width: 60%;
+    height: auto;
+}
+
+.footer_logo_container p {
+    padding: 4%;
+    color: #fff;
+    text-align: justify;
+}
+
+.footer_quick_links {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+
+.footer_link_heading {
+    color: #ffffff;
+    width: 100%;
+    border-bottom: 1px solid var(--inc_color2);
+    padding-top: 15%;
+}
+
+.footer_links {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer_links a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 200;
+    padding-bottom: 1%;
+}
+
+.footer_social_line {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.white_horizontal_line {
+    width: 100%;
+    height: 1px;
+    background-color: #fff;
+}
+
+.footer_sociall_icons {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: #ffffff;
+}
+
+.footer_sociall_icons i {
+    color: #fff;
+}
+
+.footer_copyright {
+    color: #fff;
+    font-weight: 200;
+    font-size: 80%;
+    text-align: center;
+}
+
+.footer_copyright a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.footer_copyright p {
+    padding: 0.5%;
+}
+
+
+@media (max-width: 768px) {
+    .footer_quick_links {
+        padding-top: 2% !important;
+        padding-bottom: 0 !important;
+        padding-left: 15% !important;
+        padding-right: 15% !important;
+    }
+
+    .footer_link_heading {
+        padding-top: 2%;
+    }
+
+    .footer_sociall_icons {
+        padding-top: 4%;
+        padding-bottom: 4%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* *****************************                       ABOUT PAGE CSS           ****************************/
+.about_hero-content {
+    position: relative;
+}
+
+.about_hero_wrap {
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/Rectangle\ 429.webp);
+    background-size: cover;
+    /* Ensures the image covers the entire div */
+    background-position: center;
+    /* Centers the image */
+    background-repeat: no-repeat;
+    /* Prevents the image from repeating */
+    overflow: hidden;
+    padding-bottom: 10vh;
+    z-index: -1;
+}
+
+.about_hero_content_wrap {
+    width: 100%;
+    padding-top: 20vh;
+    padding-bottom: 25vh;
+    padding-left: 15vh;
+    text-align: left;
+    line-height: 150%;
+}
+
+.about_hero_content_wrap h1 {
+    font-size: 500%;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: var(--brown_text);
+    line-height: 150%;
+}
+
+.about_hero_content_wrap p {
+    margin-bottom: 20px;
+    color: var(--brown_text);
+    line-height: 150%;
+    padding-left: 0%;
+}
+
+.about_hero_bottom_strip {
+    position: absolute;
+    bottom: 0;
+    left: 5%;
+    width: 60%;
+    height: max-content;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.about_strip_item {
+    width: max-content;
+    height: max-content;
+}
+
+.about_strip_item img {
+    width: 15%;
+}
+
+.about_stripline {
+    width: 30%;
+    height: 2px;
+    background-color: var(--inc_color2);
+}
+
+.about_strip_item h6 {
+    font-weight: bold;
+    font-size: 100%;
+}
+
+@media (max-width: 1000px) {
+    .about_hero_wrap {
+        padding-bottom: 0vh;
+    }
+
+    .about_hero_bottom_strip {
+        width: 90%;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .about_hero_content_wrap p {
+        padding-bottom: 5%;
+
+    }
+
+    .about_hero_bottom_strip {
+        width: 90%;
+    }
+
+    .about_hero_wrap {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .about_hero_content_wrap {
+        width: 100%;
+        padding-top: 0vh;
+        padding-bottom: 5vh;
+        padding-left: 0;
+        text-align: left;
+        line-height: 150%;
+        text-align: center;
+        background-color: #ffffff00;
+
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+.about_sec1 {
+    padding-top: 6%;
+    padding-bottom: 4%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about_sec1_col1 {
+    text-align: center;
+}
+
+.about_sec1_col1 img {
+    width: 80%;
+    height: auto;
+}
+
+.about_sec1_col2 {}
+
+.about_sec1_col2_txt {
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.about_sec1_col2_txt h2 {
+    width: 100%;
+    height: max-content;
+    font-weight: bold;
+    font-size: 300%;
+}
+
+.about_sec1_col2_txt p {
+    text-align: justify;
+    line-height: 200%;
+    padding: 0;
+}
+
+
+
+
+
+
+.about_sec2 {
+    padding: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.about_sec2_bg {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    z-index: -1;
+    padding-left: 10%;
+}
+
+.about_sec2_col {
+    margin-bottom: 20px;
+}
+
+.about_sec2_card {
+    text-align: center;
+    border-radius: 2rem;
+    padding: 3%;
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/Rectangle\ 410.webp);
+    background-size: cover;
+    /* Ensures the image covers the entire div */
+    background-position: center;
+    /* Centers the image */
+    background-repeat: no-repeat;
+    /* Prevents the image from repeating */
+    overflow: hidden;
+}
+
+.about_sec2_card h4 {
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+.affiliations {
+    width: 100%;
+    height: max-content;
+}
+
+.affiliations_wrap {
+    width: 100%;
+    height: max-content;
+}
+
+.affiliations_col1 h2,
+p {
+    padding-left: 8%;
+    padding-top: 2%;
+}
+
+.affiliations_col1 h2 {
+    font-weight: bold
+}
+
+.affiliations_col2 {
+    padding: 0%;
+}
+
+.affiliations_logos {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.affiliations_logos img {
+    width: 40%;
+}
+
+
+
+
+
+
+
+
+
+
+.why_us_text {
+    text-align: center;
+    font-weight: 600;
+    padding-bottom: 2%;
+    font-size: 300%;
+}
+
+
+.why_us {
+    width: 100%;
+    height: max-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.why_us_wraper {
+    padding: 3%;
+    width: 100%;
+    height: max-content;
+}
+
+.why_us_head {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.why_us_head h2 {
+    font-size: 300%;
+    color: var(--inc_color2);
+    padding: 4%;
+    border-bottom: 2px solid var(--inc_color2);
+}
+
+.whyUsStrip {
+    width: 2px;
+    height: 80%;
+    background-color: var(--inc_color2);
+}
+
+.why_us_card_wrap {
+    width: 100%;
+    height: 100%;
+    background-color: var(--inc_color2);
+    clip-path: polygon(10% 0%, 100% 0%, 100% 80%, 90% 100%, 0% 100%, 0% 20%);
+}
+
+.why_us_card {
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    clip-path: polygon(11% 1%, 99% 1%, 99% 79%, 89% 99%, 1% 99%, 1% 21%);
+    margin-bottom: 2%;
+    padding: 10%;
+}
+
+.why_us_card h2 {
+    text-align: center;
+    font-weight: 600;
+}
+
+.why_us_card p {
+    text-align: justify;
+    padding: 0;
+}
+
+.why_us_card img {
+    width: 100%;
+    height: 100%;
+}
+
+.why_us_card_content_wrap {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* *****************************                       SERVICE PAGE CSS           ****************************/
+
+.service_hero {
+    width: 100%;
+    height: max-content;
+
+    background-image: url(../img/Rectangle\ 467.webp);
+    background-size: cover;
+    /* Ensures the image covers the entire div */
+    background-position: center;
+    /* Centers the image */
+    background-repeat: no-repeat;
+    /* Prevents the image from repeating */
+    overflow: hidden;
+}
+
+.our_services {
+    width: 100%;
+    height: max-content;
+    padding: 5%;
+    transition: 1s ease;
+}
+
+.service_card_wrapper {
+    width: 100%;
+    height: max-content;
+}
+
+.service_card_container {
+    padding-left: 5% !important;
+    padding-right: 5% !important;
+    margin-bottom: 3%;
+}
+
+.service_card {
+    padding: 5%;
+    width: 100%;
+    height: 100%;
+    border-radius: 2rem;
+    box-shadow: 0px 0px 20px 7px #979797;
+    border: 4px solid #fff;
+    cursor: pointer;
+}
+
+.service_card_contentWrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 10% !important;
+    padding-bottom: 10% !important;
+}
+
+.service_card_contentWrap img {
+    width: 40%;
+}
+
+.service_card_contentWrap h5 {
+    font-weight: bold;
+    text-align: center;
+}
+
+.service_card_contentWrap p {
+    padding: 0;
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.service_card:hover .service_card_contentWrap p {
+    opacity: 1;
+    visibility: visible;
+    color: #000;
+}
+
+.service_card:hover.service_card {
+    border: 4px solid var(--inc_color1);
+    transition: 0.5s ease;
+}
+
+.service_card p {
+    text-align: right;
+    color: var(--inc_color2);
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .service_card p {
+        text-align: center;
+        display: none;
+    }
+
+    .service_card_contentWrap img {
+        width: 70%;
+    }
+
+    .service_card_wrapper {
+        width: 100%;
+        height: max-content;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* *****************************                       CONTACT PAGE CSS           ****************************/
+
+.contact_hero {
+    width: 100%;
+    height: max-content;
+
+    background-image: url(../img/Rectangle\ 468.webp);
+    background-size: cover;
+    /* Ensures the image covers the entire div */
+    background-position: center;
+    /* Centers the image */
+    background-repeat: no-repeat;
+    /* Prevents the image from repeating */
+    overflow: hidden;
+}
+
+.contact_text {
+    width: 100%;
+    height: max-content;
+    padding: 3%;
+}
+
+.contact_text p {
+    width: 60%;
+    text-align: justify;
+    padding: 0;
+}
+
+@media (max-width: 768px) {
+    .contact_text p {
+        width: 100%;
+        text-align: justify;
+    }
+}
+
+.contact_bg {
+    background-image: url(../img/Vector\ 26.webp);
+    background-size: cover;
+    /* Ensures the image covers the entire div */
+    background-position: center;
+    /* Centers the image */
+    background-repeat: no-repeat;
+    /* Prevents the image from repeating */
+    overflow: hidden;
+}
+
+.c_contact_form {
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff67;
+    border-radius: 1.5rem;
+    padding: 8% 3%;
+    border: 5px solid var(--inc_color1);
+    clip-path: polygon(100% 25%, 100% 100%, 0% 100%, 0% 0%, 75% 0%);
+
+}
+
+.c_contact_form h6 {
+    color: #000000;
+    margin-bottom: 8%;
+    font-size: 150%;
+}
+
+.c_contact_form h3 {
+    color: #000000;
+    font-weight: 700;
+    font-size: 300%;
+    margin-top: 6%;
+    margin-bottom: 8%;
+}
+
+.c_contact_form textarea {
+    width: 99%;
+    border: none;
+    outline: none;
+    margin: 0.5%;
+    padding: 2%;
+    border: 1px solid var(--inc_color2);
+    outline: 1px solid var(--inc_color2);
+    border-radius: 10px;
+}
+
+.c_contact_form button {
+    width: 100%;
+    padding: 1%;
+    border-radius: 2rem;
+    background-color: var(--inc_color1);
+    border: none;
+    outline: none;
+    font-weight: 700;
+}
+
+.cpif {
+    width: 100%;
+    height: max-content;
+    display: flex;
+    margin-bottom: 8%;
+}
+
+.cpif input {
+    width: 100%;
+    padding: 2%;
+    margin: 0.5%;
+    border: 1px solid var(--inc_color2);
+    outline: 1px solid var(--inc_color2);
+    border-radius: 10px;
+}
+
+.contact_contact_form_container {
+    width: 90%;
+    border-radius: 1.5rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* *****************************                       SERVICES SUBSIDIARY PAGES CSS           ****************************/
+
+.service_sub_hero {
+    padding: 20%;
+    position: relative;
+}
+
+.service_sub_hero_head {
+    width: max-content;
+    height: max-content;
+    position: absolute;
+    bottom: 1%;
+    left: 10%;
+}
+
+.service_sub_hero_head h1 {
+    font-size: 300%;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .service_sub_hero_head h1 {
+        font-size: 200%;
+    }
+}
+
+
+
+
+.service_sub_sec1 {
+    margin-top: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.service_sub_sec1_col1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.service_sub_sec1_col1 img {
+    width: 70%;
+}
+
+
+.service_sub_sec1_col2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+
+
+.service_sub_sec1_strip {
+    width: 80%;
+    height: max-content;
+    display: flex;
+    align-items: start;
+    justify-content: space-around;
+}
+
+
+.service_sub_strip_item {
+    width: max-content;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.service_sub_strip_item img {
+    width: 20%;
+}
+
+.service_sub_strip_item h6 {
+    font-weight: bold;
+    font-size: 100%;
+}
+
+@media (max-width: 1000px) {
+    .about_hero_bottom_strip {
+        width: 90%;
+    }
+}
+
+
+
+@media (max-width: 768px) {
+    .about_hero_bottom_strip {
+        width: 90%;
+    }
+
+    .service_sub_sec1_col1 img {
+        display: none;
+    }
+
+    .service_sub_sec1_strip {
+        width: 100%;
+    }
+
+    .service_sub_strip_item h6 {
+        font-weight: bold;
+        font-size: 80%;
+    }
+}
+
+
+
+
+.service_sub_sec1_para {
+    background-color: var(--inc_color2);
+    border-radius: 4rem;
+    width: 90%;
+    height: max-content;
+    padding: 3%;
+    margin-top: 2%;
+}
+
+.service_sub_sec1_para h3 {
+    padding-bottom: 2%;
+    color: #000;
+    text-align: justify;
+    font-weight: bold;
+}
+
+.service_sub_sec1_para p {
+    padding: 0;
+    font-size: 110%;
+    color: #000;
+    text-align: justify;
+    font-weight: 500;
+}
+
+@media (max-width: 768px) {
+    .service_sub_sec1_para {
+        padding: 8%;
+    }
+
+    .service_sub_sec1_para p {
+        font-size: 90%;
+    }
+}
+
+
+
+.service_sub_sec2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: max-content;
+    padding: 4%;
+}
+
+.service_sub_sec2_col {
+    margin-bottom: 1%;
+}
+
+.service_sub_sec2_card1 {
+    width: 100%;
+    height: 100%;
+
+    background-image: url(../img/Rectangle\ 457.webp);
+    background-size: cover;
+    /* Ensures the image covers the entire div */
+    background-position: center;
+    /* Centers the image */
+    background-repeat: no-repeat;
+    /* Prevents the image from repeating */
+    overflow: hidden;
+    border-top-right-radius: 1.5rem;
+    border-bottom-left-radius: 2.5rem;
+    padding: 3%;
+}
+
+.service_sub_sec2_card1 h3 {
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.service_sub_sec2_card1 p {
+    color: #ffffff;
+    padding: 0;
+    font-size: 120%;
+}
+
+
+.service_sub_sec2_card2 {
+
+    background-image: url(../img/Rectangle\ 457.webp);
+    background-size: cover;
+    /* Ensures the image covers the entire div */
+    background-position: center;
+    /* Centers the image */
+    background-repeat: no-repeat;
+    /* Prevents the image from repeating */
+    overflow: hidden;
+    border-top-left-radius: 1.5rem;
+    border-bottom-right-radius: 2.5rem;
+    padding: 3%;
+}
+
+.service_sub_sec2_card2 h3 {
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.service_sub_sec2_card2 p {
+    color: #ffffff;
+    padding: 0;
+    font-size: 120%;
+}
+
+@media (max-width: 768px) {
+    .service_sub_sec2_card1 p {
+        font-size: 80%;
+    }
+
+    .service_sub_sec2_card2 p {
+        font-size: 80%;
+    }
+}
+
+
+
+
+
+
+
+.service_sub_sec3 {
+    width: 100%;
+    height: max-content;
+    position: relative;
+
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 5%;
+}
+
+.service_sub_sec3 img {
+    width: 100%;
+}
+
+.service_sub_sec3_card_container {
+    width: 90% !important;
+    height: max-content;
+    margin: 0 !important;
+    padding: 5%;
+
+    height: max-content;
+    position: absolute;
+    top: 0;
+
+}
+
+.service_sub_sec3_card_container h3 {
+    color: #fff;
+    font-weight: 500;
+    font-size: 200%;
+}
+
+.service_sub_sec3_col {
+    margin-bottom: 2%;
+}
+
+.service_sub_sec3_card {
+    width: 100%;
+    height: 100%;
+}
+
+.service_sub_sec3_card_path {
+    width: 100%;
+    height: 100%;
+    clip-path: polygon(10% 0%, 100% 0%, 100% 80%, 90% 100%, 0% 100%, 0% 20%);
+    background-color: #ffffff;
+    padding: 8%;
+    border-radius: 0.5rem;
+}
+
+.service_sub_sec3_card_path h3 {
+    font-weight: bold;
+    text-align: center;
+    margin-top: 5%;
+    margin-bottom: 10%;
+    color: #000;
+}
+
+.service_sub_sec3_card_path p {
+    text-align: justify;
+    padding: 0;
+}
+
+@media (max-width: 1300px) {
+    .service_sub_sec3 img {
+        display: none;
+    }
+
+    .service_sub_sec3_card_path h3 {
+        margin-bottom: 2%;
+        font-size: 120%;
+    }
+
+    .service_sub_sec3_card_path p {
+        font-size: 80%;
+    }
+
+    .service_sub_sec3_card_container {
+        position: relative;
+        width: 100% !important;
+        height: max-content;
+        margin: 0 !important;
+        padding: 5%;
+        height: max-content;
+        top: 0;
+        border-radius: 2rem;
+    }
+
+    .cont_bg_1 {
+        background-image: url(../img/bg445.webp);
+        background-size: cover;
+        /* Ensures the image covers the entire div */
+        background-position: center;
+        /* Centers the image */
+        background-repeat: no-repeat;
+        /* Prevents the image from repeating */
+        overflow: hidden;
+    }
+
+    .cont_bg_2 {
+        background-image: url(../img/Vector\ 45.webp);
+        background-size: cover;
+        /* Ensures the image covers the entire div */
+        background-position: center;
+        /* Centers the image */
+        background-repeat: no-repeat;
+        /* Prevents the image from repeating */
+        overflow: hidden;
+    }
+
+    .cont_bg_3 {
+        background-image: url(../img/Vector\ 44.webp);
+        background-size: cover;
+        /* Ensures the image covers the entire div */
+        background-position: center;
+        /* Centers the image */
+        background-repeat: no-repeat;
+        /* Prevents the image from repeating */
+        overflow: hidden;
+    }
+
+    .cont_bg_4 {
+        background-image: url(../img/Vector\ 46.webp);
+        background-size: cover;
+        /* Ensures the image covers the entire div */
+        background-position: center;
+        /* Centers the image */
+        background-repeat: no-repeat;
+        /* Prevents the image from repeating */
+        overflow: hidden;
+    }
+
+    .cont_bg_5 {
+        background-image: url(../img/Vector\ 47.webp);
+        background-size: cover;
+        /* Ensures the image covers the entire div */
+        background-position: center;
+        /* Centers the image */
+        background-repeat: no-repeat;
+        /* Prevents the image from repeating */
+        overflow: hidden;
+    }
+
+    .cont_bg_6 {
+        background-image: url(../img/Vector\ 73.webp);
+        background-size: cover;
+        /* Ensures the image covers the entire div */
+        background-position: center;
+        /* Centers the image */
+        background-repeat: no-repeat;
+        /* Prevents the image from repeating */
+        overflow: hidden;
+    }
+
+    .cont_bg_7 {
+        background-image: url(../img/Vector\ 62.webp);
+        background-size: cover;
+        /* Ensures the image covers the entire div */
+        background-position: center;
+        /* Centers the image */
+        background-repeat: no-repeat;
+        /* Prevents the image from repeating */
+        overflow: hidden;
+    }
+
+    .cont_bg_8 {
+        background-image: url(../img/Vector\ 69.webp);
+        background-size: cover;
+        /* Ensures the image covers the entire div */
+        background-position: center;
+        /* Centers the image */
+        background-repeat: no-repeat;
+        /* Prevents the image from repeating */
+        overflow: hidden;
+    }
+
+    .cont_bg_9 {
+        background-image: url(../img/Vector\ 48.webp);
+        background-size: cover;
+        /* Ensures the image covers the entire div */
+        background-position: center;
+        /* Centers the image */
+        background-repeat: no-repeat;
+        /* Prevents the image from repeating */
+        overflow: hidden;
+    }
+
+    .cont_bg_10 {
+        background-image: url(../img/Vector\ 49.webp);
+        background-size: cover;
+        /* Ensures the image covers the entire div */
+        background-position: center;
+        /* Centers the image */
+        background-repeat: no-repeat;
+        /* Prevents the image from repeating */
+        overflow: hidden;
+    }
+
+    .cont_bg_11 {
+        background-image: url(../img/Vector\ 33.webp);
+        background-size: cover;
+        /* Ensures the image covers the entire div */
+        background-position: center;
+        /* Centers the image */
+        background-repeat: no-repeat;
+        /* Prevents the image from repeating */
+        overflow: hidden;
+    }
+
+    .cont_bg_12 {
+        background-image: url(../img/Vector\ 43.webp);
+        background-size: cover;
+        /* Ensures the image covers the entire div */
+        background-position: center;
+        /* Centers the image */
+        background-repeat: no-repeat;
+        /* Prevents the image from repeating */
+        overflow: hidden;
+    }
+
+    .cont_bg_13 {
+        background-image: url(../img/Vector\ 40.webp);
+        background-size: cover;
+        /* Ensures the image covers the entire div */
+        background-position: center;
+        /* Centers the image */
+        background-repeat: no-repeat;
+        /* Prevents the image from repeating */
+        overflow: hidden;
+    }
+
+    .cont_bg_14 {
+        background-image: url(../img/Vector\ 50.webp);
+        background-size: cover;
+        /* Ensures the image covers the entire div */
+        background-position: center;
+        /* Centers the image */
+        background-repeat: no-repeat;
+        /* Prevents the image from repeating */
+        overflow: hidden;
+    }
+}
+
+.service_sub_paragaphs {
+    width: 100%;
+    height: max-content;
+    padding-left: 5%;
+    padding-right: 5%;
+    margin-top: 2%;
+}
+
+.service_sub_paragaphs h3 {
+    font-weight: bold;
+    margin-bottom: 1%;
+}
+
+.service_sub_paragaphs p {
+    padding: 0;
+    font-weight: 500;
+    margin-bottom: 3%;
+    text-align: justify;
+}
+
+
+
+
+
+
+
+
+
+.airfreight_hero {
+    width: 100%;
+    height: max-content;
+
+    background-image: url(../img/airfrieght\ banner.webp);
+    background-size: cover;
+    /* Ensures the image covers the entire div */
+    background-position: center;
+    /* Centers the image */
+    background-repeat: no-repeat;
+    /* Prevents the image from repeating */
+    overflow: hidden;
+}
+
+.seafreight_hero {
+    width: 100%;
+    height: max-content;
+
+    background-image: url(../img/sea\ freight\ banner.webp);
+    background-size: cover;
+    /* Ensures the image covers the entire div */
+    background-position: center;
+    /* Centers the image */
+    background-repeat: no-repeat;
+    /* Prevents the image from repeating */
+    overflow: hidden;
+}
+
+.roadfreight_hero {
+    width: 100%;
+    height: max-content;
+
+    background-image: url(../img/road\ freight\ banner.webp);
+    background-size: cover;
+    /* Ensures the image covers the entire div */
+    background-position: center;
+    /* Centers the image */
+    background-repeat: no-repeat;
+    /* Prevents the image from repeating */
+    overflow: hidden;
+}
+
+.temp_controlled_cargo_hero {
+    width: 100%;
+    height: max-content;
+
+    background-image: url(../img/tempcontrolled\ cargo\ banner.webp);
+    background-size: cover;
+    /* Ensures the image covers the entire div */
+    background-position: center;
+    /* Centers the image */
+    background-repeat: no-repeat;
+    /* Prevents the image from repeating */
+    overflow: hidden;
+}
+
+.cross_trade_hero {
+    width: 100%;
+    height: max-content;
+
+    background-image: url(../img/cross\ trade\ banner.webp);
+    background-size: cover;
+    /* Ensures the image covers the entire div */
+    background-position: center;
+    /* Centers the image */
+    background-repeat: no-repeat;
+    /* Prevents the image from repeating */
+    overflow: hidden;
+}
+
+.corporate_courier_hero {
+    width: 100%;
+    height: max-content;
+
+    background-image: url(../img/corporate\ courier\ banner.webp);
+    background-size: cover;
+    /* Ensures the image covers the entire div */
+    background-position: center;
+    /* Centers the image */
+    background-repeat: no-repeat;
+    /* Prevents the image from repeating */
+    overflow: hidden;
+}
+
+.far_east_shipment_hero {
+    width: 100%;
+    height: max-content;
+
+    background-image: url(../img/far\ east\ shipment\ banner.webp);
+    background-size: cover;
+    /* Ensures the image covers the entire div */
+    background-position: center;
+    /* Centers the image */
+    background-repeat: no-repeat;
+    /* Prevents the image from repeating */
+    overflow: hidden;
+}
+
+.healthcare_hero {
+    width: 100%;
+    height: max-content;
+
+    background-image: url(../img/healthcare_hero\ banner.webp);
+    background-size: cover;
+    /* Ensures the image covers the entire div */
+    background-position: center;
+    /* Centers the image */
+    background-repeat: no-repeat;
+    /* Prevents the image from repeating */
+    overflow: hidden;
+}
+
+.warehousing_hero {
+    width: 100%;
+    height: max-content;
+
+    background-image: url(../img/Warehousing\ banner.webp);
+    background-size: cover;
+    /* Ensures the image covers the entire div */
+    background-position: center;
+    /* Centers the image */
+    background-repeat: no-repeat;
+    /* Prevents the image from repeating */
+    overflow: hidden;
+}
+
+.projectCargo_hero {
+    width: 100%;
+    height: max-content;
+
+    background-image: url(../img/projectcargo\ banner.webp);
+    background-size: cover;
+    /* Ensures the image covers the entire div */
+    background-position: center;
+    /* Centers the image */
+    background-repeat: no-repeat;
+    /* Prevents the image from repeating */
+    overflow: hidden;
+}
+
+.channel_partner_hero {
+    width: 100%;
+    height: max-content;
+
+    background-image: url(../img/channel\ partner\ banner.webp);
+    background-size: cover;
+    /* Ensures the image covers the entire div */
+    background-position: center;
+    /* Centers the image */
+    background-repeat: no-repeat;
+    /* Prevents the image from repeating */
+    overflow: hidden;
+}
+
+.customs_clearence_hero {
+    width: 100%;
+    height: max-content;
+
+    background-image: url(../img/Group\ 386.webp);
+    background-size: cover;
+    /* Ensures the image covers the entire div */
+    background-position: center;
+    /* Centers the image */
+    background-repeat: no-repeat;
+    /* Prevents the image from repeating */
+    overflow: hidden;
+}
+
+.dangerous_goods_hero {
+    width: 100%;
+    height: max-content;
+
+    background-image: url(../img/dangerous\ goods\ banner.webp);
+    background-size: cover;
+    /* Ensures the image covers the entire div */
+    background-position: center;
+    /* Centers the image */
+    background-repeat: no-repeat;
+    /* Prevents the image from repeating */
+    overflow: hidden;
+}
+
+.pharma_shipment_hero {
+    width: 100%;
+    height: max-content;
+
+    background-image: url(../img/pharma\ shipment\ banner.webp);
+    background-size: cover;
+    /* Ensures the image covers the entire div */
+    background-position: center;
+    /* Centers the image */
+    background-repeat: no-repeat;
+    /* Prevents the image from repeating */
+    overflow: hidden;
+}
+
+.thankyou_hero {
+    width: 100%;
+    height: max-content;
+
+    background-image: url(../img/Group\ 410\ t.png);
+    background-size: cover;
+    /* Ensures the image covers the entire div */
+    background-position: center;
+    /* Centers the image */
+    background-repeat: no-repeat;
+    /* Prevents the image from repeating */
+    overflow: hidden;
+}
+
+
+
+
+
+
+
+
+* {
+    /* border: 1px solid red; */
+    font-family: "Poppins", sans-serif;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/************************************* orbit dots animation *********************************/
+ul.solarsystem {
+
+    position: relative;
+    width: 100%;
+    height: 200vh;
+    list-style: none;
+    -webkit-transition: all 1s ease-in;
+    -moz-transition: all 1s ease-in;
+    -o-transition: all 1s ease-in;
+    transition: all 1s ease-in;
+    overflow: hidden;
+    padding: 0;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+ul.solarsystem li {
+    text-indent: -9999px;
+    display: flex;
+    position: absolute;
+    border: 1px solid #a3a3a300;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+
+}
+
+ul.solarsystem li span {
+    display: block;
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+ul.solarsystem li.active {
+    border-color: #aa4200;
+}
+
+
+
+ul.solarsystem li.mercury {
+    width: 100px;
+    height: 100px;
+    -webkit-border-radius: 52px;
+    -moz-border-radius: 52px;
+    border-radius: 52px;
+    top: 270px;
+    left: 430px;
+    z-index: 99;
+}
+
+ul.solarsystem li.mercury span {
+    background: #F4B845;
+    top: 10px;
+    left: 10px;
+}
+
+ul.solarsystem li.venus {
+    width: 160px;
+    height: 160px;
+    -webkit-border-radius: 82px;
+    -moz-border-radius: 82px;
+    border-radius: 82px;
+    top: 240px;
+    left: 400px;
+    z-index: 98;
+}
+
+ul.solarsystem li.venus span {
+    background: #F4B845;
+    top: 118px;
+    left: 5px;
+}
+
+ul.solarsystem li.earth {
+    width: 220px;
+    height: 220px;
+    -webkit-border-radius: 112px;
+    -moz-border-radius: 112px;
+    border-radius: 112px;
+    top: 210px;
+    left: 370px;
+    z-index: 97;
+}
+
+ul.solarsystem li.earth span {
+    background: #F4B845;
+    top: 56px;
+    left: 5px;
+}
+
+ul.solarsystem li.earth span.moon {
+    width: 4px;
+    height: 4px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    background: #F4B845;
+    top: 12px;
+    left: 12px;
+}
+
+ul.solarsystem li.mars {
+    width: 280px;
+    height: 280px;
+    -webkit-border-radius: 142px;
+    -moz-border-radius: 142px;
+    border-radius: 142px;
+    top: 180px;
+    left: 340px;
+    z-index: 96;
+}
+
+ul.solarsystem li.mars span {
+    background: #F4B845;
+    top: 0px;
+    left: 175px;
+}
+
+ul.solarsystem li.asteroids_meteorids {
+    top: 155px;
+    left: 315px;
+    z-index: 1;
+    width: 330px;
+    height: 330px;
+    -webkit-border-radius: 165px;
+    -moz-border-radius: 165px;
+    border-radius: 165px;
+    border: none;
+}
+
+ul.solarsystem li.jupiter {
+    width: 340px;
+    height: 340px;
+    -webkit-border-radius: 172px;
+    -moz-border-radius: 172px;
+    border-radius: 172px;
+    top: 150px;
+    left: 310px;
+    z-index: 95;
+}
+
+ul.solarsystem li.jupiter span {
+    background: #F4B845;
+    top: 67px;
+    left: 24px;
+}
+
+ul.solarsystem li.saturn {
+    width: 400px;
+    height: 400px;
+    -webkit-border-radius: 202px;
+    -moz-border-radius: 202px;
+    border-radius: 202px;
+    top: 120px;
+    left: 280px;
+    z-index: 94;
+}
+
+ul.solarsystem li.saturn span {
+    background: #F4B845;
+    top: 24px;
+    left: 300px;
+}
+
+
+
+ul.solarsystem li.uranus {
+    width: 460px;
+    height: 460px;
+    -webkit-border-radius: 232px;
+    -moz-border-radius: 232px;
+    border-radius: 232px;
+    top: 90px;
+    left: 250px;
+    z-index: 93;
+}
+
+ul.solarsystem li.uranus span {
+    background: #F4B845;
+    top: 7px;
+    left: 300px;
+}
+
+ul.solarsystem li.neptune {
+    width: 520px;
+    height: 520px;
+    -webkit-border-radius: 262px;
+    -moz-border-radius: 262px;
+    border-radius: 262px;
+    top: 60px;
+    left: 220px;
+    z-index: 92;
+}
+
+ul.solarsystem li.neptune span {
+    background: #F4B845;
+    top: 0px;
+    left: 200px;
+}
+
+ul.solarsystem li.pluto {
+    width: 580px;
+    height: 580px;
+    -webkit-border-radius: 292px;
+    -moz-border-radius: 292px;
+    border-radius: 292px;
+    top: 30px;
+    left: 190px;
+    z-index: 91;
+}
+
+ul.solarsystem li.pluto span {
+    background: #F4B845;
+    top: 79px;
+    left: 79px;
+}
+
+
+
+/* CSS3 Animations */
+ul.solarsystem li {
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-name: orbit;
+
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: linear;
+    -moz-animation-name: orbit;
+}
+
+ul.solarsystem li.earth span {
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-name: moon;
+
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: linear;
+    -moz-animation-name: moon;
+}
+
+ul.solarsystem li.mercury {
+    -webkit-animation-duration: 5s;
+    -moz-animation-duration: 5s;
+}
+
+ul.solarsystem li.venus {
+    -webkit-animation-duration: 8s;
+    -moz-animation-duration: 8s;
+}
+
+ul.solarsystem li.earth {
+    -webkit-animation-duration: 12s;
+    -moz-animation-duration: 12s;
+}
+
+ul.solarsystem li.earth span {
+    -webkit-animation-duration: 2s;
+    -moz-animation-duration: 2s;
+}
+
+ul.solarsystem li.mars {
+    -webkit-animation-duration: 10s;
+    -moz-animation-duration: 10s;
+}
+
+ul.solarsystem li.jupiter {
+    -webkit-animation-duration: 10s;
+    -moz-animation-duration: 10s;
+}
+
+ul.solarsystem li.saturn {
+    -webkit-animation-duration: 8s;
+    -moz-animation-duration: 8s;
+}
+
+ul.solarsystem li.uranus {
+    -webkit-animation-duration: 4s;
+    -moz-animation-duration: 4s;
+}
+
+ul.solarsystem li.neptune {
+    -webkit-animation-duration: 8s;
+    -moz-animation-duration: 8s;
+}
+
+ul.solarsystem li.pluto {
+    -webkit-animation-duration: 10s;
+    -moz-animation-duration: 10s;
+}
+
+@-webkit-keyframes orbit {
+    from {
+        -webkit-transform: rotate(0deg)
+    }
+
+    to {
+        -webkit-transform: rotate(360deg)
+    }
+}
+
+@-webkit-keyframes moon {
+    from {
+        -webkit-transform: rotate(0deg)
+    }
+
+    to {
+        -webkit-transform: rotate(360deg)
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ********************* privacy policy || terms and conditions *********************** */
+
+.privacy_policy {
+    width: 100%;
+    height: max-content;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.privacy_policy_container {
+    width: 90%;
+    border-radius: 1rem;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    padding: 2%;
+    border: 5px solid var(--inc_color2);
+}
+
+.privacy_policy_container p {
+    padding: 0;
+}
+
+
+.p_p_hero {
+    width: 100%;
+    height: max-content;
+
+    background-image: url(../img/privacy\ policy.webp);
+    background-size: cover;
+    /* Ensures the image covers the entire div */
+    background-position: center;
+    /* Centers the image */
+    background-repeat: no-repeat;
+    /* Prevents the image from repeating */
+    overflow: hidden;
+}
+
+.t_c_hero {
+    width: 100%;
+    height: max-content;
+
+    background-image: url(../img/terms\ and\ conditions.webp);
+    background-size: cover;
+    /* Ensures the image covers the entire div */
+    background-position: center;
+    /* Centers the image */
+    background-repeat: no-repeat;
+    /* Prevents the image from repeating */
+    overflow: hidden;
+}
+
+.terms_conditions {
+    width: 100%;
+    height: max-content;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.terms_conditions_container {
+    width: 90%;
+    border-radius: 1rem;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    padding: 2%;
+    border: 5px solid var(--inc_color2);
+}
+
+.terms_conditions_container p {
+    padding: 0;
+}
+
+.terms_conditions_container a {
+    text-decoration: none;
+}
+
+
+.cookie_policy {
+    padding: 5%;
+}
+
+.cookie_policy p {
+    padding: 0%;
+}
+
+.cookie_policy_container {
+    padding: 2%;
+    border: 5px solid var(--inc_color2);
+    border-radius: 1rem;
+
+}
+
+
+.cookies_float {
+    position: fixed;
+    bottom: 30px;
+    left: 30px;
+    width: 60%;
+    height: max-content;
+    border: 2px solid var(--inc_color2);
+    border-radius: 1rem;
+    background-color: #fff;
+    display: none;
+    align-items: center;
+    justify-content: space-around;
+    z-index: 99999;
+    padding: 1%;
+}
+
+
+.cookies_float p {
+    padding: 0;
+    width: 70%;
+}
+
+.coookie_buttons {
+    display: flex;
+    flex-direction: column;
+}
+
+.coookie_buttons button {
+    margin: 4%;
+    padding: 10px 20px;
+    border: 2px solid var(--inc_color2);
+    background-color: #fff;
+    font-weight: bold;
+    border-radius: 2rem;
+}
+
+@media (max-width: 768px) {
+    .cookies_float {
+        flex-direction: column;
+    }
+    .cookies_float p {
+        padding: 0;
+        width: 90%;
+    }
+    .coookie_buttons {
+        flex-direction: row;
+    }
+}
+
+@media (max-width: 450px) {
+    .coookie_buttons {
+        flex-direction: column;
+    }
+}
+
+
+
+
+.sitemap_hero {
+    width: 100%;
+    height: max-content;
+
+    background-image: url(../img/sitemaphero.webp);
+    background-size: cover;
+    /* Ensures the image covers the entire div */
+    background-position: center;
+    /* Centers the image */
+    background-repeat: no-repeat;
+    /* Prevents the image from repeating */
+    overflow: hidden;
+}
+
+.sitemap_container {
+    width: 90%;
+    border-radius: 1rem;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    padding: 2%;
+    border: 5px solid var(--inc_color2);
+}
+
+.sitemap_container p {
+    padding: 0;
+}
+
+.sitemap_container a {
+    text-decoration: none;
+    color: #A67923;
+}
+
+
+
+
+
+
+
+/* whatsapp */
+
+
+.floating_btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 99999;
+}
+
+@keyframes pulsing {
+    to {
+        box-shadow: 0 0 0 30px rgba(232, 76, 61, 0);
+    }
+}
+
+.contact_icon {
+    background-color: #42db87;
+    color: #fff;
+    width: 60px;
+    height: 60px;
+    font-size: 30px;
+    border-radius: 50px;
+    text-align: center;
+    box-shadow: 2px 2px 3px #999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translatey(0px);
+    animation: pulse 1.5s infinite;
+    box-shadow: 0 0 0 0 #42db87;
+    -webkit-animation: pulsing 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+    -moz-animation: pulsing 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+    -ms-animation: pulsing 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+    animation: pulsing 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+    font-weight: normal;
+    font-family: sans-serif;
+    text-decoration: none !important;
+    transition: all 300ms ease-in-out;
+}
+
+
+.text_icon {
+    margin-top: 8px;
+    color: #000000;
+    font-size: 13px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.thankyou_box_container {
+    width: 100%;
+    height: max-content;
+}
+
+.thankyou_box {
+    background-color: var(--inc_color2);
+    border-radius: 2rem;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    padding-left: 3% !important;
+    padding-right: 3% !important;
+}
+
+.thankyou_box p {
+    padding: 0;
+}
+
+.thankyou_box h3 {
+    padding: 0;
+    font-weight: bold;
+}
+
+.thankyou_img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.thankyou_img img {
+    width: 30%;
+    margin-top: 1%;
+}
+
+.thankyou_why_choose {
+    width: 100%;
+    height: max-content;
+    padding-left: 2%;
+}
+
+.thankyou_next_steps_item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.thankyou_next_steps_item img {
+    width: 50%;
+    margin: 5%;
+}
+
+.thankyou_next_steps_item h6 {
+    font-weight: bold;
+}
+
+.thankyou_next_steps_item p {
+    width: 60%;
+    padding: 0;
+}
+
+.home_contact_image h5 {
+    font-weight: bold;
+    width: 60%;
+}
+
+
+
+.fasion_text_card{
+    border: 5px solid var(--inc_color1);
+    margin-left: 3%;
+    margin-top: 2% !important;
+    width: 94% !important;
+    background-color: #ffffffb6;
+    border-radius: 10px;
+    padding: 1%;
+}
+.fasion_text_card p{
+    padding: 0;
+    text-align: justify;
+    color: #000;
+    font-weight: 500;
+}
+
+
+
+
+
+
+
+
+
+
+
+* {
+    /* border: 1px solid red; */
+}
+
+
+
+
